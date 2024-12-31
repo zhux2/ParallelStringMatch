@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'strmatch'
+version = '1.0-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'strmatch.Main'  // 替换为你的主类的全名
+}
+
+dependencies {
+    // Process options
+    implementation("info.picocli:picocli:4.7.6")
+
+//    testImplementation platform('org.junit:junit-bom:5.10.0')
+//    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
